@@ -66,12 +66,9 @@ public class Main extends PApplet {
 									break;
 
 								case "COLOR":
-									contador++;
-									if (contador > 2) {
-										contador = 0;
-									}
-									System.out.println(contador);
-
+									r = (int) random(0,255);
+									g = (int) random(0,255);
+									b = (int) random(0,255);
 									break;
 
 								default:
@@ -90,12 +87,12 @@ public class Main extends PApplet {
 	}
 
 	int x = 250, y = 250;
-	int r, g, b;
+	int r = 255, g = 0, b = 0;
 	int contador = 0;
 
 	public void draw() {
 		background(0);
-		if (contador == 0) {
+		/*if (contador == 0) {
 			r = 255;
 			g = 0;
 			b = 0;
@@ -111,7 +108,7 @@ public class Main extends PApplet {
 			r = 0;
 			g = 0;
 			b = 255;
-		}
+		}*/
 
 		fill(r, g, b);
 		ellipse(x, y, 50, 50);
